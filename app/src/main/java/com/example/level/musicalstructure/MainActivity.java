@@ -35,8 +35,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Log.i("MainActivity", "SongsActivity started.");
-
         // Find the View that shows the family category
         ImageView nowplaying = (ImageView) findViewById(R.id.nowplaying);
 
