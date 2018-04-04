@@ -36,56 +36,40 @@ public class MainActivity extends AppCompatActivity {
         });
 
         Log.i("MainActivity", "SongsActivity started.");
-//
-//        // Find the View that shows the family category
-//        TextView family = (TextView) findViewById(R.id.family);
-//
-//        // Set a click listener on that View
-//        family.setOnClickListener(new View.OnClickListener() {
-//            // The code in this method will be executed when the numbers View is clicked on.
-//            @Override
-//            public void onClick(View view) {
-//
-//                //Creating an Intent to open the sub-activity contains the list of numbers. Then start this activity.
-//                Intent familyIntent = new Intent(MainActivity.this, FamilyActivity.class);
-//
-//                //Start the new activity.
-//                startActivity(familyIntent);
-//            }
-//        });
-//
-//        // Find the View that shows the colors category
-//        TextView colors = (TextView) findViewById(R.id.colors);
-//
-//        // Set a click listener on that View
-//        colors.setOnClickListener(new View.OnClickListener() {
-//            // The code in this method will be executed when the numbers View is clicked on.
-//            @Override
-//            public void onClick(View view) {
-//
-//                //Creating an Intent to open the sub-activity contains the list of numbers. Then start this activity.
-//                Intent colorsIntent = new Intent(MainActivity.this, ColorsActivity.class);
-//
-//                //Start the new activity.
-//                startActivity(colorsIntent);
-//            }
-//        });
-//
-//        // Find the View that shows the phrases category
-//        TextView phrases = (TextView) findViewById(R.id.phrases);
-//
-//        // Set a click listener on that View
-//        phrases.setOnClickListener(new View.OnClickListener() {
-//            // The code in this method will be executed when the numbers View is clicked on.
-//            @Override
-//            public void onClick(View view) {
-//
-//                //Creating an Intent to open the sub-activity contains the list of numbers. Then start this activity.
-//                Intent phrasesIntent = new Intent(MainActivity.this, PhrasesActivity.class);
-//
-//                //Start the new activity.
-//                startActivity(phrasesIntent);
-//            }
-//        });
+
+        // Find the View that shows the family category
+        ImageView nowplaying = (ImageView) findViewById(R.id.nowplaying);
+
+        // Set a click listener on that View
+        nowplaying.setOnClickListener(new View.OnClickListener() {
+            // The code in this method will be executed when the numbers View is clicked on.
+            @Override
+            public void onClick(View view) {
+
+                //Creating an Intent to open the sub-activity contains the list of numbers. Then start this activity.
+                Intent nowplayingIntent = new Intent(MainActivity.this, NowPlayingActivity.class);
+
+                //Start the new activity.
+                startActivity(nowplayingIntent);
+            }
+        });
+
+        // Find the View that shows the colors category
+        ImageView artists = (ImageView) findViewById(R.id.artists);
+
+        // Set a click listener on that View
+        artists.setOnClickListener(new View.OnClickListener() {
+            // The code in this method will be executed when the numbers View is clicked on.
+            @Override
+            public void onClick(View view) {
+
+                //Creating an Intent to open the sub-activity contains the list of numbers. Then start this activity.
+                Intent artistsIntent = new Intent(MainActivity.this, ArtistsActivity.class);
+
+                //Start the new activity.
+                startActivity(artistsIntent);
+            }
+        });
+
     }
 }

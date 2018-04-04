@@ -10,6 +10,6 @@ public class NowPlayingActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_nowplaying);
+        setContentView(R.layout.activity_list);
     }
 }
