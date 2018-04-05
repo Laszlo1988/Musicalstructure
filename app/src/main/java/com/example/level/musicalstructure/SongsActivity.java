@@ -1,8 +1,13 @@
 package com.example.level.musicalstructure;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.Adapter;
+import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -59,5 +64,57 @@ public class SongsActivity extends AppCompatActivity {
         // Make the {@link ListView} use the {@link WordAdapter} we created above, so that the
         // {@link ListView} will display list items for each {@link Word} in the list.
         listView.setAdapter(adapter);
+
+        // Find the ImageView "play button".
+        ImageView playButton = (ImageView) findViewById(R.id.play_button);
+
+        // Set a click listener on that ImageView
+        playButton.setOnClickListener(new View.OnClickListener() {
+            // The code in this method will be executed when the "play_button" ImageView is clicked on.
+            @Override
+            public void onClick(View view) {
+
+                //Creating an Intent to open the sub-activity contains the "NowPlaying" activity.
+                Intent nowPlayingIntent = new Intent(SongsActivity.this, NowPlayingActivity.class);
+
+                //Start the new activity.
+                startActivity(nowPlayingIntent);
+            }
+        });
+
+        // Find the "Home" button.
+        Button homeButton = (Button) findViewById(R.id.home_button);
+
+        // Set a click listener on the "Home" button.
+        homeButton.setOnClickListener(new View.OnClickListener() {
+            // The code in this method will be executed when the "home_button" is clicked on.
+            @Override
+            public void onClick(View view) {
+
+                //Creating an Intent to open MainActivity.
+                Intent HomeIntent = new Intent(SongsActivity.this, MainActivity.class);
+
+                //Start the MainActivity.
+                startActivity(HomeIntent);
+            }
+        });
+
+        // Find the "Artists" button.
+        Button artistsButton = (Button) findViewById(R.id.artists_button);
+
+        // Set a click listener on the "Artists" button.
+        artistsButton.setOnClickListener(new View.OnClickListener() {
+            // The code in this method will be executed when the "artist_button" is clicked on.
+            @Override
+            public void onClick(View view) {
+
+                //Creating an Intent to open the ArtistsActivity.
+                Intent ArtistsIntent = new Intent(SongsActivity.this, ArtistsActivity.class);
+
+                //Start the ArtistsActivity.
+                startActivity(ArtistsIntent);
+            }
+        });
+
     }
 }

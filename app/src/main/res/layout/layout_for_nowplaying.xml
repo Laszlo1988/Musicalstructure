@@ -45,11 +45,13 @@
             android:text="Home"
             android:textColor="@color/button_text_color" />
 
-        <ImageView
-            android:id="@+id/play_button"
+        <Button
+            android:id="@+id/songs_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/play_button" />
+            android:backgroundTint="@color/button_color"
+            android:text="Songs"
+            android:textColor="@color/button_text_color" />
 
         <Button
             android:id="@+id/artists_button"

@@ -20,9 +20,6 @@
             android:name=".ArtistsActivity"
             android:label="Artists" />
         <activity
-            android:name=".ArtistsSongsActivity"
-            android:label="ArtistsSongs" />
-        <activity
             android:name=".NowPlayingActivity"
             android:label="Nowplaying" />
         <activity

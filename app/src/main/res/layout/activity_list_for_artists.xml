@@ -52,17 +52,18 @@
             android:background="@drawable/play_button" />
 
         <Button
-            android:id="@+id/artists_button"
+            android:id="@+id/songs_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginLeft="@dimen/medium_margin"
             android:backgroundTint="@color/button_color"
-            android:text="Artists"
+            android:text="Songs"
             android:textColor="@color/button_text_color" />
     </LinearLayout>
 
 </RelativeLayout>
+
 
 
 
