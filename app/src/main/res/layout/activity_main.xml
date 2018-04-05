@@ -51,6 +51,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
+                android:contentDescription="@null"
                 android:src="@drawable/play" />
 
         </RelativeLayout>
@@ -68,6 +69,7 @@
                 android:layout_marginRight="@dimen/small_margin"
                 android:layout_marginTop="@dimen/big_margin"
                 android:adjustViewBounds="true"
+                android:contentDescription="@null"
                 android:scaleType="fitXY"
                 android:src="@drawable/singer_resize" />
 

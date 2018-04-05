@@ -34,6 +34,23 @@ public class SongsActivity extends AppCompatActivity {
             {"Jomsviking (2016)", "First Kill", "Wanderer", "On A Sea Of Blood", "One Against All", "Raise Your Horns", "The Way Of Vikings", "At Dawn's First Light", "One Thousand Burning Arrows", "Vengeance Is My Name", "A Dream That Cannot Be", "Back On Northern Shores"}
     };
 
+    String[][] DreamTheater = {
+            {"Dream Theater"},
+            {"album: When Dream And Day Unite (1989)", "A Fortune In Lies", "Status Seeker", "The Ytse Jam", "The Killing Hand", "Light Fuse And Get Away", "Afterlife", "The Ones Who Help To Set The Sun", "Only A Matter Of Time"},
+            {"album: Images And Words (1992)", "Pull Me Under", "Another Day", "Take The Time", "Surrounded", "Metropolis - Part I - The Miracle And The Sleeper", "Under A Glass Moon", "Wait For Sleep", "Learning To Live"},
+            {"album: Awake (1994)", "6:00", "Caught In A Web", "Innocence Faded", "Erotomania", "Voices", "The Silent Man", "The Mirror", "Lie", "Lifting Shadows Off A Dream", "Scarred", "Space-Dye Vest", "EP: A Change Of Seasons (1995)", "A Change Of Seasons", "Funeral For A Friend / Love Lies Bleeding", "Perfect Strangers", "The Rover / Achilles Last Stand / The Song Remains The Same", "The Big Medley"},
+            {"album: Falling Into Infinity (1997)", "New Millennium", "You Not Me", "Peruvian Skies", "Hollow Years", "Burning My Soul", "Hell's Kitchen", "Lines In The Sand", "Take Away My Pain", "Just Let Me Breathe", "Anna Lee", "Trial Of Tears"},
+            {"album: Scenes From A Memory (1999)", "Scene One: Regression", "Scene Two: I. Overture", "II. Strange Deja Vu", "Scene Three: I. Through My Words", "II. Fatal Tragedy", "Scene Four: Beyond This Life", "Scene Five: Through Her Eyes", "Scene Six: Home", "Scene Seven: I. The Dance Of Eternity", "II. One Last Time", "Scene Eight: The Spirit Carries On", "Scene Nine: Finally Free"},
+            {"album: Six Degrees Of Inner Turbulence (2002)", "The Glass Prison", "Blind Faith", "Misunderstood", "The Great Debate", "Disappear", "Six Degrees Of Inner Turbulence"},
+            {"album: Train Of Thought (2003)", "As I Am", "This Dying Soul", "Endless Sacrifice", "Honor Thy Father", "Vacant", "Stream Of Consciousness", "In The Name Of God"},
+            {"album: Octavarium (2005)", "The Root Of All Evil", "The Answer Lies Within", "These Walls", "I Walk Beside You", "Panic Attack", "Never Enough", "Sacrificed Sons", "Octavarium"},
+            {"album: Score (2006)", "The Root Of All Evil", "I Walk Beside You", "Another Won", "Afterlife", "Under A Glass Moon", "Innocence Faded", "Raise The Knife", "The Spirit Carries On", "Six Degrees Of Inner Turbulence", "Vacant", "The Answer Lies Within", "Sacrificed Sons", "Octavarium", "Metropolis"},
+            {"album: Systematic Chaos (2007)", "In The Presence Of Enemies, Pt. 1", "Forsaken", "Constant Motion", "The Dark Eternal Night", "Repentance", "Prophets Of War", "The Ministry Of Lost Souls", "In The Presence Of Enemies, Pt. 2"},
+            {"album: Black Clouds & Silver Linings (2009)", "A Nightmare To Remember", "A Rite Of Passage", "Wither", "The Shattered Fortress", "The Best Of Times", "The Count Of Tuscany"},
+            {"album: A Dramatic Turn Of Events (2011)", "On The Backs Of Angels", "Build Me Up, Break Me Down", "Lost Not Forgotten", "This Is The Life", "Bridges In The Sky", "Outcry", "Far From Heaven", "Breaking All Illusions", "Beneath The Surface"},
+            {"album: Dream Theater (2013)", "False Awakening Suite", "The Enemy Inside", "The Looking Glass", "Enigma Machine", "The Bigger Picture", "Behind The Veil", "Surrender To Reason", "Along For The Ride", "Illumination Theory", "EP: Illumination Theory (2014)", "I. Paradoxe De La Lumière Noire", "II. Live, Die, Kill", "III. The Embracing Circle", "IV. The Pursuit Of Truth", "V. Surrender, Trust & Passion"},
+            {"album: The Astonishing (2016)", "Descent Of The Nomacs", "Dystopian Overture", "The Gift Of Music", "The Answer", "A Better Life", "Lord Nafaryus", "A Savior In The Square", "When Your Time Has Come", "Act Of Faythe", "Three Days", "The Hovering Sojourn", "Brother, Can You Hear Me?", "A Life Left Behind", "Ravenskill", "Chosen", "A Tempting Offer", "Digital Discord", "The X Aspect", "A New Beginning", "The Road To Revolution", "2285 Entr'acte", "Moment Of Betrayal", "Heaven's Cove", "Begin Again", "The Path That Divides", "Machine Chatter", "The Walking Shadow", "My Last Farewell", "Losing Faythe", "Whispers On The Wind", "Hymn Of A Thousand Voices", "Our New World", "Power Down", "Astonishing"}
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,12 +60,21 @@ public class SongsActivity extends AppCompatActivity {
 
         ArrayList<Song> songs = new ArrayList<Song>();
 
-        //This for loop fill the Song object with the songs of the band Amon Amarth from an Array.
+        //This for loop fill Song objects with the songs of the band "Amon Amarth" from an Array.
         for (int i = 0; i < AmonAmarth.length; i++) {
             for (int j = 1; j < AmonAmarth[i].length; j++) {
                 //At the end of each loop, the song titles, album title and the band's name is added to
                 //the ArrayList as a new Song object.
                 songs.add(new Song(AmonAmarth[i][j], AmonAmarth[i][0], AmonAmarth[0][0]));
+            }
+        }
+
+        //This for loop fill Song objects with the songs of the band "Dream Theater" from an Array.
+        for (int i = 0; i < DreamTheater.length; i++) {
+            for (int j = 1; j < DreamTheater[i].length; j++) {
+                //At the end of each loop, the song titles, album title and the band's name is added to
+                //the ArrayList as a new Song object.
+                songs.add(new Song(DreamTheater[i][j], DreamTheater[i][0], DreamTheater[0][0]));
             }
         }
 
