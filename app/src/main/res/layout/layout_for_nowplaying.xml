@@ -24,14 +24,31 @@
     </LinearLayout>
 
     <ImageView
+        android:id="@+id/cover_example"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_above="@id/play_buttons"
         android:layout_marginLeft="@dimen/big_margin"
         android:layout_marginRight="@dimen/big_margin"
+        android:scaleType="fitEnd"
+        android:src="@drawable/album_cover_example" />
+
+    <ImageView
+        android:id="@+id/play_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/buttons_tab"
+        android:layout_marginBottom="@dimen/small_margin"
+        android:layout_marginLeft="@dimen/big_margin"
+        android:layout_marginRight="@dimen/big_margin"
+        android:adjustViewBounds="true"
         android:contentDescription="@null"
-        android:src="@drawable/player_buttons" />
+        android:scaleType="fitXY"
+        android:src="@drawable/player_buttons_with_line" />
+
 
     <LinearLayout
+        android:id="@+id/buttons_tab"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -51,7 +68,7 @@
             android:layout_marginEnd="@dimen/medium_margin"
             android:layout_marginRight="@dimen/medium_margin"
             android:backgroundTint="@color/button_color"
-            android:text="Home"
+            android:text="@string/home_button"
             android:textColor="@color/button_text_color" />
 
         <Button
@@ -59,7 +76,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/button_color"
-            android:text="Songs"
+            android:text="@string/songs_button"
             android:textColor="@color/button_text_color" />
 
         <Button
@@ -70,7 +87,7 @@
             android:layout_marginLeft="@dimen/medium_margin"
             android:layout_marginStart="@dimen/medium_margin"
             android:backgroundTint="@color/button_color"
-            android:text="Artists"
+            android:text="@string/artists_button"
             android:textColor="@color/button_text_color" />
     </LinearLayout>
 

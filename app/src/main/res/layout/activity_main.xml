@@ -27,11 +27,11 @@
         android:layout_marginRight="@dimen/medium_margin"
         android:background="@color/secondary_background"
         android:orientation="vertical"
-        android:paddingBottom="@dimen/big_margin">
+        android:paddingBottom="@dimen/medium_margin">
 
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_marginLeft="@dimen/small_margin"
             android:layout_marginRight="@dimen/small_margin"
             android:layout_marginTop="@dimen/big_margin">
@@ -39,22 +39,25 @@
             <ImageView
                 android:id="@+id/songs"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
-                android:src="@drawable/songlist"
-                tools:ignore="ContentDescription" />
+                android:layout_marginRight="@dimen/medium_margin"
+                android:layout_weight="1.0"
+                android:contentDescription="@null"
+                android:src="@drawable/songlist_greyish" />
 
             <ImageView
                 android:id="@+id/nowplaying"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
+                android:layout_weight="1.0"
                 android:contentDescription="@null"
-                android:src="@drawable/play" />
+                android:src="@drawable/play_yellow_gray" />
 
-        </RelativeLayout>
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -67,7 +70,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/small_margin"
                 android:layout_marginRight="@dimen/small_margin"
-                android:layout_marginTop="@dimen/big_margin"
+                android:layout_marginTop="@dimen/medium_margin"
                 android:adjustViewBounds="true"
                 android:contentDescription="@null"
                 android:scaleType="fitXY"

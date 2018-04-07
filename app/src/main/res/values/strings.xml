@@ -1,5 +1,9 @@
 <resources>
     <string name="app_name">MusicalStructure</string>
     <string name="app_title">Music4U</string>
+    <string name="home_button">Home</string>
+    <string name="play_button">Play</string>
+    <string name="artists_button">Artists</string>
+    <string name="songs_button">Songs</string>
 
 </resources>
